@@ -1,5 +1,10 @@
 name: 'Eastplayer CICD action'
 description: 'Lorem ipsum'
+inputs:
+  project:  # id of input
+    description: 'project name'
+    required: true
+
 runs:
   using: "composite"
   steps:
@@ -10,5 +15,5 @@ runs:
         GITHUB_ACTION_PATH: ${{ github.action_path }}
 
     - name: Run cicd.sh
-      run: cicd.sh
+      run: cicd.sh {{ inputs.project }}
       shell: bash
