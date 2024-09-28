@@ -15,5 +15,5 @@ runs:
         GITHUB_ACTION_PATH: ${{ github.action_path }}
 
     - name: Run cicd.sh
-      run: cicd.sh {{ inputs.project }}
+      run: cicd.sh ${{ inputs.project }}
       shell: bash
